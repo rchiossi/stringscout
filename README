@@ -1,0 +1,11 @@
+/*
+ * ABOUT THE CODE:
+ *
+ * This is a native implementation of a buffered string search algorithm
+ *
+ * The chunk size was obtained by profiling the binary.
+ * The best observed value was 16k.
+ *
+ * The performance of this implementations is very similar to the GNU strings
+ * for general string search.
+ */
