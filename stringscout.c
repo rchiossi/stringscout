@@ -10,10 +10,6 @@
 #include <stdlib.h>
 #include <stdio.h>
   
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #define CHUNK_SIZE 16348
 #define LIST_START_SIZE 4096
 
@@ -120,8 +116,3 @@ int main(int argc, char* argv[]) {
 
   return 0;
 }
-
-#ifdef __cplusplus
-}
-#endif
-
