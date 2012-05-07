@@ -112,7 +112,8 @@ int main(int argc, char* argv[]) {
 
   strings_file(argv[1]);
 
-  printf("%s\n",string_list);
+  if (string_list != NULL)
+    printf("%s\n",string_list);
 
   return 0;
 }
