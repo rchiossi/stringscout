@@ -10,8 +10,6 @@
 #include <stdlib.h>
 #include <stdio.h>
   
-#define LOGE(...) printf(__VA_ARGS__)
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -62,7 +60,7 @@ int strings_file(const char* path) {
   unsigned num_strings = 0;
   
   if (file == NULL) {
-    LOGE("Error opening file : %s\n",path);
+    printf("[-] Error opening file : %s\n",path);
     return -1;
   }
   
@@ -84,7 +82,7 @@ int strings_file(const char* path) {
       if (cur_size+length >= max_size) {
 	string_list = (char*) realloc(string_list, sizeof(char)*max_size*2);
 	if (string_list == NULL) {
-	  LOGE("Error: Failed to allocate memory!\n");
+	  printf("[-] Error: Failed to allocate memory!\n");
 	  return -1;
 	}
 	max_size *= 2;
@@ -112,7 +110,7 @@ int strings_file(const char* path) {
 
 int main(int argc, char* argv[]) {
   if (argc != 2) {
-    printf("[!] Usage: ./stringnator file\n");
+    printf("[!] Usage: ./stringscout file\n");
     exit(0);
   }
 
